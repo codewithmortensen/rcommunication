@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { MoreHorizontal } from 'lucide-react';
+import Link from 'next/link';
 
 interface ProductActionProps {
   product: Product;
@@ -33,7 +34,11 @@ const ProductActions = ({ product }: ProductActionProps) => {
           Copy Product ID
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>View Product details</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href={`/inventory/${product.productID}`}>
+            View Product details
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem>View Recent Transactions</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
