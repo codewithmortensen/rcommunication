@@ -1,7 +1,12 @@
 import React from 'react';
+import EmployeeDetail from './components/EmployeeDetail';
 
 const EmployeeDetailPage = () => {
-  return <div>EmployeeDetailPage</div>;
+  return (
+    <div>
+      <EmployeeDetail />
+    </div>
+  );
 };
 
 export default EmployeeDetailPage;

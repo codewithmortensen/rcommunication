@@ -27,3 +27,5 @@ export type Employee = {
   status: string;
   salary: number;
 };
+
+// todo catch the employee email address
