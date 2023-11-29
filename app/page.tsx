@@ -1,4 +1,3 @@
-'use client';
 import DateRangerPicker from './components/DateRangePicker';
 
 const HomePage = () => {

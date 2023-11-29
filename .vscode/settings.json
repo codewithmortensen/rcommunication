@@ -1,3 +1,5 @@
 {
-  "cSpell.words": ["mork"]
+  "cSpell.words": ["mork"],
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }
