@@ -23,7 +23,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { useState } from 'react';
-import { CalendarDateRangePicker } from '../../components/DateRangePicker';
 
 interface ReportProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -64,9 +63,6 @@ const ReportTable = <TData, TValue>({
           }
           className='max-w-sm'
         />
-        <div>
-          <CalendarDateRangePicker />
-        </div>
       </div>
       <Table className='rounded-sm border'>
         <TableHeader>

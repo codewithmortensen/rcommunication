@@ -1,12 +1,6 @@
 'use client';
 
-import { Button, buttonVariants } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { DataTablePagination } from '@/app/inventory/components/DataPaginations';
 import { Input } from '@/components/ui/input';
 import {
   Table,
@@ -29,10 +23,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { useState } from 'react';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { DataTablePagination } from '@/app/inventory/components/DataPaginations';
-import { CalendarDateRangePicker } from './DateRangePicker';
 
 interface AttendanceProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -73,9 +63,6 @@ const AttendanceTable = <TData, TValue>({
           }
           className='max-w-sm'
         />
-        <div>
-          <CalendarDateRangePicker />
-        </div>
       </div>
       <Table className='rounded-sm border'>
         <TableHeader>

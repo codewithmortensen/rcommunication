@@ -1,3 +1,6 @@
+import { z } from 'zod';
+import { datePickerSchema } from './schema';
+
 export type Product = {
   productID: string;
   name: string;
@@ -53,3 +56,5 @@ export type AttendanceReports = {
   presentCount: number;
   absentCount: number;
 };
+
+export type DatePickerData = z.infer<typeof datePickerSchema>;
