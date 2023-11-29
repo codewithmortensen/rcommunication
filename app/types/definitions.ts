@@ -28,4 +28,18 @@ export type Employee = {
   salary: number;
 };
 
+// dayOff
+// startTime
+// endTime
 // todo catch the employee email address
+
+export type Attendances = {
+  attendanceID: string;
+  employeeId: string;
+  entryTime: Date;
+  exitTime: Date;
+  entryStatus: 'On Time' | 'Late';
+  exitStatus: 'Early' | 'On Time';
+  workdayStatus: 'Present' | 'Absent';
+  currentDate: Date;
+};
