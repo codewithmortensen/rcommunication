@@ -14,3 +14,16 @@ export type Collection = {
   name: string;
   slug: string;
 };
+
+export type Employee = {
+  employeeID: string;
+  firstName: string;
+  lastName: string;
+  birthDate: Date;
+  gender: 'Male' | 'Female';
+  phone: string;
+  address: string;
+  jobTitle: string;
+  status: string;
+  salary: number;
+};
