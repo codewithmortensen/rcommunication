@@ -43,3 +43,13 @@ export type Attendances = {
   workdayStatus: 'Present' | 'Absent';
   currentDate: Date;
 };
+
+export type AttendanceReports = {
+  reportID: string;
+  employeeID: string;
+  onTimeEntryCount: number;
+  lateEntryCount: number;
+  earlyExitCount: number;
+  presentCount: number;
+  absentCount: number;
+};
