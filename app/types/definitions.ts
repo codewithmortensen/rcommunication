@@ -19,22 +19,28 @@ export type Collection = {
 };
 
 export type Employee = {
-  employeeID: string;
-  firstName: string;
-  lastName: string;
-  birthDate: Date;
+  employee_id: string;
+  first_name: string;
+  last_name: string;
+  birth_date: Date;
   gender: 'Male' | 'Female';
   phone: string;
+  email: string;
   address: string;
-  jobTitle: string;
+  job_title: string;
   status: string;
   salary: number;
+  dey_off:
+    | 'Monday'
+    | 'Tuesday'
+    | 'Wednesday'
+    | 'Thursday'
+    | 'Friday'
+    | 'Saturday'
+    | 'Sunday';
+  start_time: Date;
+  end_time: Date;
 };
-
-// dayOff
-// startTime
-// endTime
-// todo catch the employee email address
 
 export type Attendances = {
   attendanceID: string;

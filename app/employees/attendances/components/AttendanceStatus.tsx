@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import { EntryStatus, ExitStatus, WorkdayStatus } from '@prisma/client';
 
 interface EntryProps {

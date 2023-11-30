@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ReactQueryProvider from './providers/ReactQueryProvider';
+import clsx from 'clsx';
+import { cn } from '@/libs/utils';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={cn(inter.className, 'antialiased')}>
         <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>

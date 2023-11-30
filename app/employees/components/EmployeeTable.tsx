@@ -31,7 +31,7 @@ import {
 import { useState } from 'react';
 
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import { DataTablePagination } from '@/app/inventory/components/DataPaginations';
 
 interface EmployeeProps<TData, TValue> {

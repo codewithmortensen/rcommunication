@@ -31,7 +31,7 @@ import {
 import { useState } from 'react';
 import { DataTablePagination } from './DataPaginations';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 interface ProductTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
