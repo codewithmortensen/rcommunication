@@ -1,9 +1,8 @@
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/libs/utils';
-import { EntryStatus, ExitStatus, WorkdayStatus } from '@prisma/client';
 
 interface EntryProps {
-  entryStatus: EntryStatus;
+  entryStatus: 'On_Time' | 'Late';
 }
 export const EntryBadge = ({ entryStatus }: EntryProps) => {
   const variant = entryStatus === 'On_Time' ? 'bg-green-500' : 'bg-red-600';
@@ -15,7 +14,7 @@ export const EntryBadge = ({ entryStatus }: EntryProps) => {
 };
 
 interface ExitProps {
-  exitStatus: ExitStatus;
+  exitStatus: 'Early' | 'On_Time';
 }
 
 export const ExitBadge = ({ exitStatus }: ExitProps) => {
@@ -28,7 +27,7 @@ export const ExitBadge = ({ exitStatus }: ExitProps) => {
 };
 
 interface WorkDayProps {
-  workdayStatus: WorkdayStatus;
+  workdayStatus: 'Present' | 'Absent';
 }
 export const WorkDayBadge = ({ workdayStatus }: WorkDayProps) => {
   const variant = workdayStatus === 'Present' ? 'bg-green-500' : 'bg-red-600';

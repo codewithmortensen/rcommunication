@@ -1,6 +1,10 @@
 import { z } from 'zod';
 import { datePickerSchema } from './schema';
 
+export type InventoryProductStatus = {
+  status: '';
+};
+
 export type Product = {
   productID: string;
   name: string;
@@ -47,8 +51,8 @@ export type Attendances = {
   employeeId: string;
   entryTime: Date;
   exitTime: Date;
-  entryStatus: 'On Time' | 'Late';
-  exitStatus: 'Early' | 'On Time';
+  entryStatus: 'On_Time' | 'Late';
+  exitStatus: 'Early' | 'On_Time';
   workdayStatus: 'Present' | 'Absent';
   currentDate: Date;
 };
