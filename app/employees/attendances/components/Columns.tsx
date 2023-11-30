@@ -1,12 +1,13 @@
 'use client';
 
-import { Attendances } from '@/app/types/definitions';
+// import { Attendances } from '@/app/types/definitions';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown } from 'lucide-react';
 import { EntryBadge, ExitBadge, WorkDayBadge } from './AttendanceStatus';
-export const columns: ColumnDef<Attendances>[] = [
+import { Attendance } from '@prisma/client';
+export const columns: ColumnDef<Attendance>[] = [
   {
     id: 'select',
     header: ({ table }) => (
@@ -30,11 +31,11 @@ export const columns: ColumnDef<Attendances>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: 'employeeId',
+    accessorKey: 'employeeEmployeeID',
     header: 'Employee ID',
     cell: ({ row }) => {
-      const id = row.getValue('employeeId');
-      return <span>{`Emp-${id}`}</span>;
+      const id = row.getValue('employeeEmployeeID');
+      return <span>{`${id}`}</span>;
     },
   },
   {
@@ -52,8 +53,8 @@ export const columns: ColumnDef<Attendances>[] = [
       );
     },
     cell: ({ row }) => {
-      const time: Date = row.getValue('entryTime');
-      return `${time.toLocaleTimeString()}`;
+      const dateTime: Date = row.getValue('entryTime');
+      return `${new Date(dateTime).toLocaleTimeString()}`;
     },
   },
   {
@@ -89,8 +90,8 @@ export const columns: ColumnDef<Attendances>[] = [
       );
     },
     cell: ({ row }) => {
-      const time: Date = row.getValue('exitTime');
-      return `${time.toLocaleTimeString()}`;
+      const dateTime: Date = row.getValue('exitTime');
+      return `${new Date(dateTime).toLocaleTimeString()}`;
     },
   },
   {

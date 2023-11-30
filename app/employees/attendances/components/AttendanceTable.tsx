@@ -56,10 +56,14 @@ const AttendanceTable = <TData, TValue>({
         <Input
           placeholder='Search for Employee...'
           value={
-            (table.getColumn('employeeId')?.getFilterValue() as string) ?? ''
+            (table
+              .getColumn('employeeEmployeeID')
+              ?.getFilterValue() as string) ?? ''
           }
           onChange={(event) =>
-            table.getColumn('employeeId')?.setFilterValue(event.target.value)
+            table
+              .getColumn('employeeEmployeeID')
+              ?.setFilterValue(event.target.value)
           }
           className='max-w-sm'
         />
