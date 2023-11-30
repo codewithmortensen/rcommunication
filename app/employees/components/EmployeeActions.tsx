@@ -29,13 +29,13 @@ const EmployeeActions = ({ employee }: ProductActionProps) => {
       <DropdownMenuContent align='end'>
         <DropdownMenuLabel>Actions</DropdownMenuLabel>
         <DropdownMenuItem
-          onClick={() => navigator.clipboard.writeText(employee.employeeID)}
+          onClick={() => navigator.clipboard.writeText(employee.employee_id)}
         >
           Copy Product ID
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link href={`/employees/${employee.employeeID}`}>
+          <Link href={`/employees/${employee.employee_id}`}>
             View Employee details
           </Link>
         </DropdownMenuItem>

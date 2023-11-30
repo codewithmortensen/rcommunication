@@ -66,10 +66,10 @@ const EmployeeTable = <TData, TValue>({
         <Input
           placeholder='Search for Employees...'
           value={
-            (table.getColumn('firstName')?.getFilterValue() as string) ?? ''
+            (table.getColumn('first_name')?.getFilterValue() as string) ?? ''
           }
           onChange={(event) =>
-            table.getColumn('firstName')?.setFilterValue(event.target.value)
+            table.getColumn('first_name')?.setFilterValue(event.target.value)
           }
           className='max-w-sm'
         />

@@ -30,15 +30,15 @@ export const columns: ColumnDef<Employee>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: 'employeeID',
+    accessorKey: 'employee_id',
     header: 'Employee ID',
     cell: ({ row }) => {
-      const id = row.getValue('employeeID');
-      return <span>{`Emp-${id}`}</span>;
+      const id = row.getValue('employee_id');
+      return <span>{`${id}`}</span>;
     },
   },
   {
-    accessorKey: 'firstName',
+    accessorKey: 'first_name',
     header: ({ column }) => {
       return (
         <Button
@@ -53,7 +53,7 @@ export const columns: ColumnDef<Employee>[] = [
     },
   },
   {
-    accessorKey: 'lastName',
+    accessorKey: 'last_name',
     header: ({ column }) => {
       return (
         <Button
@@ -87,7 +87,7 @@ export const columns: ColumnDef<Employee>[] = [
     },
   },
   {
-    accessorKey: 'birthDate',
+    accessorKey: 'birth_date',
     header: ({ column }) => {
       return (
         <Button
@@ -101,7 +101,7 @@ export const columns: ColumnDef<Employee>[] = [
       );
     },
     cell: ({ row }) => {
-      const birthDate: Date = row.getValue('birthDate');
+      const birthDate: Date = row.getValue('birth_date');
       return `${birthDate.toDateString()}`;
     },
   },
