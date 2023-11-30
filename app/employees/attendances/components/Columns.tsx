@@ -1,13 +1,13 @@
 'use client';
 
-// import { Attendances } from '@/app/types/definitions';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown } from 'lucide-react';
 import { EntryBadge, ExitBadge, WorkDayBadge } from './AttendanceStatus';
 import { Attendance } from '@prisma/client';
-export const columns: ColumnDef<Attendance>[] = [
+import { Attendances } from '@/app/types/definitions';
+export const columns: ColumnDef<Attendances>[] = [
   {
     id: 'select',
     header: ({ table }) => (
