@@ -5,7 +5,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown } from 'lucide-react';
 import { EntryBadge, ExitBadge, WorkDayBadge } from './AttendanceStatus';
-import { Attendance } from '@prisma/client';
 import { Attendances } from '@/app/types/definitions';
 export const columns: ColumnDef<Attendances>[] = [
   {
